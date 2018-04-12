@@ -7,8 +7,13 @@ import org.testng.annotations.Test;
 public class NewTest {
   @Test
   public void firstTest() {
+	  System.out.println("Test1");
+  }
+  @Test
+  public void secondTest() {
 	  System.out.println("Test2");
   }
+  
   @BeforeClass
   public void beforeClass() {
 	  System.out.println("Before1");
