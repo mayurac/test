@@ -1,21 +1,21 @@
 package test.test2.test3;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class NewTest {
   @Test
-  public void f() {
+  public void firstTest() {
 	  System.out.println("Test2");
   }
   @BeforeClass
-  public static void beforeClass() {
+  public void beforeClass() {
 	  System.out.println("Before1");
   }
 
   @AfterClass
-  public static void afterClass() {
+  public void afterClass() {
 	  System.out.println("After");
   }
 
