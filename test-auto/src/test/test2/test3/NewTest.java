@@ -1,8 +1,8 @@
 package test.test2.test3;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class NewTest {
   @Test
@@ -10,12 +10,12 @@ public class NewTest {
 	  System.out.println("Test2");
   }
   @BeforeClass
-  public void beforeClass() {
+  public static void beforeClass() {
 	  System.out.println("Before1");
   }
 
   @AfterClass
-  public void afterClass() {
+  public static void afterClass() {
 	  System.out.println("After");
   }
 
