@@ -4,7 +4,7 @@
 	<property name="src" value="${basedir}/src" />
 	<property name="bin" value="${basedir}/bin" />
 	<property name="lib" value="${basedir}/lib" />
-	<property name="reports-dir" location="${basedir}/reports" />
+	<property name="reports-dir" location="C:/reports" />
 	<property name="testng-report-dir" value="${reports-dir}/TestNGreport" />
 	<property name="suite_dir" value="${src}/test/test2/suites" />
 	
