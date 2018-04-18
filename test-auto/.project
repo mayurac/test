@@ -13,5 +13,6 @@
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.borland.silktest.silk4j.silk4jnature</nature>
 	</natures>
 </projectDescription>
