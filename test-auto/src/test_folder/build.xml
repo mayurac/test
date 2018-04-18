@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="test-auto" default="compile">
+	<property name="basedir" value="." />
+	<property name="src" value="${basedir}/src" />
+	<property name="bin" value="${basedir}/bin" />
+	<property name="lib" value="${basedir}/lib" />
+	<property name="reports-dir" location="C:/reports" />
+	<property name="testng-report-dir" value="${reports-dir}/TestNGreport" />
+	<property name="suite_dir" value="${src}/test/test2/suites" />
+	
+	<path id="classpath">
+		<pathelement location="${bin}" />
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<target name="clean">
+			<delete dir="${bin}" />
+			<delete dir="${testng-report-dir}" />
+	</target>
+
+
+	<target name="compile">
+		<mkdir dir="${bin}" />
+<!--		<copy file="${src}/silk4j.settings" todir="${bin}" /> -->
+
+		<javac srcdir="${src}" destdir="${bin}" debug="true" source="1.8" target="1.8" encoding="utf-8" includeantruntime="false" verbose="true">
+			<classpath refid="classpath" />
+		</javac>
+
+	</target>
+	
+	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="classpath" />
+	
+	
+	<target name="P0 test" depends="compile">
+				<mkdir dir="${testng-report-dir}" />
+				<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true" verbose="1">
+					<xmlfileset dir="${suite_dir}" includes="testng2.xml" />
+				</testng>
+				
+		</target>
+
+</project>
